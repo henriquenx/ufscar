@@ -1,39 +1,38 @@
 import turtle
 
-#Exercicio 1 - parâmetro metros -> decimetros, milimetros, centimetros
+#Exercicio 1 
 def converte(a):
     return((a * 10), (a*100), (a*1000))
 
-#Exercicio 2 - ano bissexto
+#Exercicio 2 
 def bissexto(ano):
-    if (ano % 400 == 0) or ((ano % 4 == 0) and(ano % 100 != 0)): #ano bissexto: tem que ser divisivel por 4
-        #e não por 100, mas se for divisivel por 400 também é bissexto
+    if (ano % 400 == 0) or ((ano % 4 == 0) and(ano % 100 != 0)): 
         return True
     else:
         return False
 
-#Exercicio 3 - polígono em turtle
-def poligono(lados, tam):  #n de lados e o tamanho do lado
-    for i in range(lados): #percore o n de lados
-        turtle.forward(tam) #se move n tamanho para frente, distancia dela
-        turtle.left(360/lados) #se move n lados para a esquerda
+#Exercicio 3
+def poligono(lados, tam):  
+    for i in range(lados): 
+        turtle.forward(tam) 
+        turtle.left(360/lados) 
 
-#Exercicio 4 - polígono em cores
+#Exercicio 4 
 def cores_poli(cores, tam):
     for cor in cores:
         turtle.color(cor)
         turtle.forward(tam)
         turtle.left(360/len(cores))
         
-#Exercicio 5 - numeros dentro de uma string
+#Exercicio 5 
 def numero(frase):
-    contador = 0 #atribuindo uma variável
-    for numero in frase: #percorrendo a string frase
-        if numero.isdigit(): #se for True quer dizer que é um digito e soma um no contador
+    contador = 0 
+    for numero in frase: 
+        if numero.isdigit():
             contador += 1
     return contador
 
-#Exercicio 6 - seq_gene e seq_ref
+#Exercicio 6 
 def contido(seq_ref, seq_gene):
     if seq_gene < seq_ref:
         if set(seq_ref).intersection(seq_ref):
@@ -41,7 +40,7 @@ def contido(seq_ref, seq_gene):
         else:
             return 'Não contido'
             
-#Exercicio 7 - y em asteriscos
+#Exercicio 7 
 def impar(x):
     matriz = []
     for linha in range(x):
@@ -61,7 +60,7 @@ def impar(x):
         final = ' '.join(matriz[i])
         print(final)
         
-#Exercício 8 - matriz simétrica
+#Exercício 8 
 def simetrico(matriz):
     for linha in range(len(matriz)):
         for coluna in range(len(matriz)):
@@ -69,7 +68,7 @@ def simetrico(matriz):
                 return False
         return True
 
-#Exercício 9 - multiplicação de matrizes
+#Exercício 9 
 def mult_matrizes(m1,m2):
     num_linhas_m1, num_col_m1 = len(m1), len(m1[0])
     num_linhas_m2, num_col_m2 = len(m2), len(m2[0])
