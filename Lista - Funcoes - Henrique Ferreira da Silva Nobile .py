@@ -32,35 +32,8 @@ def numero(frase):
             contador += 1
     return contador
 
-#Exercicio 6 
-def contido(seq_ref, seq_gene):
-    if seq_gene < seq_ref:
-        if set(seq_ref).intersection(seq_gene):
-            return 'Contido'
-        else:
-            return 'Não contido'
             
-#Exercicio 7 
-def impar(x):
-    matriz = []
-    for linha in range(x):
-        matriz.append([])
-        for coluna in range(x):
-            matriz[i].append('')
-
-    f = x // 2
-    for linha in range(f):
-        matriz[i][i] = '*'
-    for coluna in range(x):
-        for j in range(x):
-            if i+j == x-1:
-                matriz[i][j] = '*'
-
-    for i in range(x):
-        final = ' '.join(matriz[i])
-        print(final)
-        
-#Exercício 8 
+        #Exercício 8 
 def simetrico(matriz):
     for linha in range(len(matriz)):
         for coluna in range(len(matriz)):
@@ -105,15 +78,6 @@ def main(): #função que chama todas as funções
     
     #ex 5
     frase = input("Digite a frase: ")
-    
-    #ex 6
-    seq_gene = input("Digite a sequência gene separado por virgula: ")
-    seq_ref = input("Digite a sequência ref separado por vírgula: ")
-    seq_gene = seq_gene.split(",")
-    seq_ref = seq_ref.split(",")
-    
-    #ex 7
-    impar = int(input("Digite um número impar: "))
     
     #ex 8
     matriz = input("Digite a matriz: ")
