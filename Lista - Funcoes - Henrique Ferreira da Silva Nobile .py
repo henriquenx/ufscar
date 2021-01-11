@@ -33,7 +33,7 @@ def numero(frase):
     return contador
 
             
-        #Exercício 8 
+#Exercício 8 
 def simetrico(matriz):
     for linha in range(len(matriz)):
         for coluna in range(len(matriz)):
