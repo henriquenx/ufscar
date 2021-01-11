@@ -81,7 +81,13 @@ def mult_matrizes(m1,m2):
             for k in range(num_col_m1):
                 C[linha][coluna] += m1[linha][k] * m2[k][coluna]
     return C
-    
+
+# Exercício 10
+def addlin(arquivo, texto, linha):
+    arquivo = open(arquivo, 'a')
+    arquivo[linha].write('\n',texto)
+    arquivo.close()
+
 def main(): #função que chama todas as funções
     #ex1
     a = converte(input("Digite o parâmetro em metro: "))
@@ -115,3 +121,9 @@ def main(): #função que chama todas as funções
     #ex 9
     m1 = input("Digite a matriz A: ")
     m2 = input("Digite a matriz B: ")
+    
+    #ex 10
+    arquivo = input('Qual o nome do arquivo, com sua respectiva extensão?')
+    texto = input('Qual o texto você gostar de adicionar?')
+    linha = int(input('A qual linha você gostaria de adicionar o texto acima?'))
+    addlin(arquivo, texto, linha)
