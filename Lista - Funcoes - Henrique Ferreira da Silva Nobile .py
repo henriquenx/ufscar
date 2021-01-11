@@ -35,7 +35,7 @@ def numero(frase):
 #Exercicio 6 
 def contido(seq_ref, seq_gene):
     if seq_gene < seq_ref:
-        if set(seq_ref).intersection(seq_ref):
+        if set(seq_ref).intersection(seq_gene):
             return 'Contido'
         else:
             return 'Não contido'
@@ -123,7 +123,9 @@ def main(): #função que chama todas as funções
     m2 = input("Digite a matriz B: ")
     
     #ex 10
-    arquivo = input('Qual o nome do arquivo, com sua respectiva extensão?')
-    texto = input('Qual o texto você gostar de adicionar?')
-    linha = int(input('A qual linha você gostaria de adicionar o texto acima?'))
+    arquivo = input('Nome do arquivo, com sua respectiva extensão: ')
+    texto = input('Texto que você gostaria de adicionar:')
+    linha = int(input('A qual linha você gostaria de adicionar o texto acima:'))
     addlin(arquivo, texto, linha)
+
+main()
